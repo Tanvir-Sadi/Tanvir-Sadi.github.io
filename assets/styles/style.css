@@ -74,6 +74,9 @@
   width: 27px; /* Set a specific slider handle width */
   height: 27px; /* Slider handle height */
   box-shadow: 0px 0px 5px #dc3545;
+  transition: box-shadow .5s ease-in;
+  transition: width .5s ease-in;
+  transition: height .5s ease-in;
 }
 
 .slider::-moz-range-thumb {
@@ -89,4 +92,7 @@
   width: 27px; /* Set a specific slider handle width */
   height: 27px; /* Slider handle height */
   box-shadow: 0px 0px 5px #dc3545;
+  transition: box-shadow,width,height .5s ease-in;
+  /* transition: width .5s ease-in;
+  transition: height .5s ease-in; */
 }
