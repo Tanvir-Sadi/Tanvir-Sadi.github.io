@@ -2,7 +2,23 @@
 
 var slider = document.getElementById("myRange");
 var output = document.getElementById("passwordDigit");
-var genaratedPassword = document.getElementById("genaratedPassword");
+var foo = document.getElementById("foo");
+var resetPassword = document.getElementById("resetPassword");
+var copyPassword = document.getElementById("copyPassword");
+var clipboard = new ClipboardJS('#copyPassword');
+
+clipboard.on('success', function(e) {
+
+  console.info('Action:', e.action);
+  console.info('Text:', e.text);
+  console.info('Trigger:', e.trigger);
+  e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
 
 output.value = slider.value; // Display the default slider value
 
@@ -10,7 +26,7 @@ output.value = slider.value; // Display the default slider value
 slider.oninput = function() {
   output.value = this.value;
   console.log(makeid(output.value));
-  genaratedPassword.value = makeid(output.value);
+  foo.value = makeid(output.value);
 }
 
 output = document.getElementById("passwordDigit");
@@ -23,7 +39,12 @@ output.oninput = function() {
   }
   slider.value = output.value;
   console.log(makeid(output.value));
-  genaratedPassword.value= makeid(output.value);
+  foo.value = makeid(output.value);
+}
+
+resetPassword.onclick = function() {
+  console.log(makeid(output.value));
+  foo.value = makeid(output.value);
 }
 
 function makeid(length) {
