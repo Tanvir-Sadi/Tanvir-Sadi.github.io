@@ -22,14 +22,14 @@
       <h1 class="text-center font-weight-300" font>Genarate Password Easily!</h1>
       <p class="text-center font-weight-200"> Genarate Your custom password nice and easy.</p>
       <div class="row justify-content-center">
-        <div class="col-lg-6 col-xl-5">
+        <div class="col-lg-7">
           <div class="card mx-auto">
             <div class="card-body">
               <form class="" action="index.html" method="post">
                 <div class="form-group d-flex justify-content-between">
-                  <input type="text" class="form-control font-size-small" id="foo" placeholder="Genarated Password will be shown in here.">
+                  <input type="text" class="form-control font-size-small" id="genaratedPassword" placeholder="Genarated Password will be shown in here.">
                   <button type="button" name="button" class="btn btn-danger mx-1" id="resetPassword"><i class="fas fa-sync"></i></button>
-                  <button type="button" name="button" class="btn btn-danger" data-clipboard-target="#foo" id="copyPassword"><i class="fas fa-copy"></i></button>
+                  <button type="button" name="button" class="btn btn-danger" data-clipboard-target="#genaratedPassword" id="copyPassword"><i class="fas fa-copy"></i></button>
                 </div>
                 <div class="progress mt-3" style="height: 5px;">
                   <div class="progress-bar progress-bar-striped bg-danger" id="passwordStrength" role="progressbar" style="width: 5%" aria-valuenow="10" aria-valuemin="1" aria-valuemax="50"></div>
@@ -50,6 +50,32 @@
                     <div class="col-9 col-md-10 mt-2">
                       <div class="slidecontainer">
                         <input type="range" min="1" max="50" value="10" class="slider" id="myRange">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-3">
+                    <div class="col">
+                      <div class="row">
+                        <div class="col">
+                          <input type="checkbox" name="uppercase" value="" id="uppercase">
+                          <label for="uppercase">Uppercase</label>
+                        </div>
+                        <div class="col">
+                          <input type="checkbox" name="lowercase" value="" id="lowercase">
+                          <label for="lowercase">Lowercase</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row">
+                        <div class="col">
+                          <input type="checkbox" name="symble" value="" id="symble">
+                          <label for="symble">Symble</label>
+                        </div>
+                        <div class="col">
+                          <input type="checkbox" name="number" value="" id="number">
+                          <label for="number">Number</label>
+                        </div>
                       </div>
                     </div>
                   </div>
