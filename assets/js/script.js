@@ -41,7 +41,29 @@ output.oninput = function() {
     // this.value = 1;
   }
   slider.value = output.value;
-  console.log(makeid(output.value));xca
+  console.log(makeid(output.value));
+  genaratedPassword.value = makeid(output.value);
+}
+
+// Reload random genarated password again
+resetPassword.onclick = function() {
+  console.log(makeid(output.value));
+  genaratedPassword.value = makeid(output.value);
+}
+
+
+function makeid(length) {
+   var result = '';
+   var characters = '';
+   var ul = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+   var ll = 'qwertyuiopasdfghjklzxcvbnm';
+   var sl = '!@#$%^&*()_+-=';
+   var nl = '1234567890';
+   characters = makeResult(uppercase,ul,characters);
+   characters = makeResult(lowercase,ll,characters);
+   characters = makeResult(symble,sl,characters);
+   characters = makeResult(number,nl,characters);
+   var charactersLength = characters.length;
    for ( var i = 0; i < length; i++ ) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
    }
